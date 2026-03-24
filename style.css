@@ -15,7 +15,13 @@ body {
 .honbun {
   position: absolute;
   top: 20px;
-  left: 120px;
+  left: 20px;
+}
+
+.book {
+  position: relative;
+  padding-left: 10px;
+  font-weight: bold;
 }
 
 .navigation {
