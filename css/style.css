@@ -8,9 +8,12 @@ body {
   /* display: flex;
   justify-content: center;
   align-items: center; */
-  font-family: "Yu Mincho Demibold";
   height: 100vh;
   background-color: white;
+}
+
+h1 {
+  font-family: "Yu Mincho Demibold";
 }
 
 .honbun {
@@ -29,7 +32,6 @@ body {
   font-weight: bold;
 }
 
-.book .ex {
-  padding-left: 20px;
-  font-weight: normal;
+ul {
+  padding-left: 30px;
 }
