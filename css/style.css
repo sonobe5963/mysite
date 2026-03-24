@@ -13,93 +13,12 @@ body {
   background-color: white;
 }
 
-.sidebar_css {
-  position: fixed;
-  left: -250px;
-  color: white;
-  background-color: #8AB7D2;
-  border-right: 1px solid gray;
-  width: 200px;
-  height: 100%;
-  transition: all 0.5s;
-  list-style: none;
-  text-decoration: none;
-}
-
-.sidebar_css header {
-  text-align: center;
-  font-size: 25px;
-  padding-top: 10px;
-  height: 60px;
-}
-
-.sidebar_css ul a {
-  display: block;
-  font-size: 20px;
-  height: 100%;
-  width: 100%;
-  padding-left: 20px;
-  border-top: 1px solid gray;
-}
-
-#check {
-  display: none;
-}
-
-label #hamburg,
-label #cancel {
-  position: absolute;
-  cursor: pointer;
-  border-radius: 3px;
-  left: 10px;
-  top: 10px;
-  font-size: 25px;
-  color: black;
-  background-color: #8AB7D2;
-  padding: 6px 12px;
-}
-
-label #hamburg {
-  z-index: 3000;
-}
-
-label #cancel {
-  z-index: 1000;
-  left: -1000px;
-}
-
-#check:checked ~ body {
-  background-color: black;
-  opacity: 0.15;
-}
-
-#check:checked ~ .sidebar_css {
-  left: 0px;
-}
-
-#check:checked ~ label #hamburg {
-  left: -250px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-#check:checked ~ label #cancel {
-  left: 10px;
-}
-
-
-
-/* honbun */
 .honbun {
   position: absolute;
   top: 20px;
-  left: 80px;
+  left: 20px;
   z-index: 100;
   transition: all 0.5s;
-}
-
-#check:checked ~ .honbun {
-  left: 260px;
 }
 
 .book {

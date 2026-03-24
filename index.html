@@ -12,30 +12,14 @@
     />
 </head>
 <body>
-    <!-- toggle -->
-     <input type="checkbox" id="check" >
-     <label for="check">
-        <i class="fas fa-bars" id = "hamburg"></i>
-        <i class="far fa-times" id = "cancel"></i>
-     </label>
-    <!-- sidebar -->
-    <div id="sidebar"></div>
-    <script>
-    fetch('/sidebar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('sidebar').innerHTML = data;
-        });
-    </script>
-    <!-- sidebar end -->
     <div class="honbun">
         <h1>Salve! / ようこそ！</h1>
         <br>
         <p>こちらは園部悠太のサイトです。</p>
         <br>
-        <h2>リンク</h2>
-        <a href="bunken/main.html">カトリック神学文献一覧</a><br>
-        <a href="opera/kk.html">公教会祈祷文 附ラテン語</a>
+        <h2>コンテンツ</h2>
+        <a href="bunken/main.html">文献案内</a><br>
+        <a href="opera/kk.html">公教会祈祷文</a>
     </div>
 </body>
 </html>
