@@ -8,29 +8,98 @@ body {
   /* display: flex;
   justify-content: center;
   align-items: center; */
+  font-family: "Yu Mincho Demibold";
   height: 100vh;
   background-color: white;
 }
 
+.sidebar {
+  position: fixed;
+  left: -250px;
+  color: white;
+  background-color: #8AB7D2;
+  border-right: 1px solid gray;
+  width: 200px;
+  height: 100%;
+  transition: all 0.5s;
+  list-style: none;
+  text-decoration: none;
+}
+
+.sidebar header {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 10px;
+  height: 60px;
+}
+
+.sidebar ul a {
+  display: block;
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  border-top: 1px solid gray;
+}
+
+#check {
+  display: none;
+}
+
+label #hamburg,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 3px;
+  left: 10px;
+  top: 10px;
+  font-size: 25px;
+  color: black;
+  background-color: #8AB7D2;
+  padding: 6px 12px;
+}
+
+label #hamburg {
+  z-index: 3000;
+}
+
+label #cancel {
+  z-index: 1000;
+  left: -1000px;
+}
+
+#check:checked ~ body {
+  background-color: black;
+  opacity: 0.15;
+}
+
+#check:checked ~ .sidebar {
+  left: 0px;
+}
+
+#check:checked ~ label #hamburg {
+  left: -250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+  left: 10px;
+}
+
+
+
+/* honbun */
 .honbun {
   position: absolute;
   top: 20px;
-  left: 20px;
+  left: 80px;
+  z-index: 100;
+  transition: all 0.5s;
 }
 
-.honbun h1 {
-  color: black;/*文字色*/
-  padding: 0.5em 0;/*上下の余白*/
-}
-
-.honbun h2 {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 0.3em 0.3em;/*文字の上下 左右の余白*/
-  color: black;/*文字色*/
-  background: #f4f4f4;/*背景色*/
-  border-left: solid 5px #7db4e6;/*左線*/
-  border-bottom: solid 3px #d7d7d7;/*下線*/
+#check:checked ~ .honbun {
+  left: 280px;
 }
 
 .book {
@@ -43,17 +112,4 @@ body {
 .book .ex {
   padding-left: 20px;
   font-weight: normal;
-}
-
-.navigation {
-  position: relative;
-  top: 10px;
-  /* height: 500px; 最初はこれ*/
-  height: 100vh;
-  /* width: 300px; 最初はこれ*/
-  width: 100px;
-  background-color: grey;
-  border-left: 10px solid grey;
-  overflow-x: hidden;
-  transition: all 0.5s;
 }
