@@ -12,6 +12,10 @@ body {
   background-color: white;
 }
 
+.honbun {
+  position: relative;
+}
+
 .navigation {
   position: relative;
   /* height: 500px; 最初はこれ*/
