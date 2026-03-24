@@ -27,32 +27,5 @@
         <a href="opera/bunken.html">カトリック神学文献一覧</a><br>
         <a href="opera/kokyokaikitobun.html">公教会祈祷文</a>
     </div>
-
-
-    <script
-        type="module"
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-        >
-    </script>
-    <script
-        nomodule
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-        >
-    </script>
-
-    <script>
-        const list = document.querySelectorAll(".list");
-        console.log(list);
-        function activeLink() {
-        list.forEach((item) =>
-        // console.log(item);
-                item.classList.remove("active")
-            );
-            this.classList.add("active");
-            }
-        list.forEach((item) => {
-        item.addEventListener("click", activeLink);
-        });
-    </script>
 </body>
 </html>
