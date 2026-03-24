@@ -18,6 +18,18 @@ body {
   left: 20px;
 }
 
+.honbun h1 {
+  color: #364e96;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+}
+
+.honbun h2 {
+  padding: 0.5em;/*文字周りの余白*/
+  color: #494949;/*文字色*/
+  background: #fffaf4;/*背景色*/
+  border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+}
+
 .book {
   position: relative;
   padding-left: 10px;
