@@ -19,24 +19,15 @@
         <i class="far fa-times" id = "cancel"></i>
      </label>
     <!-- sidebar -->
-    <div class="sidebar">
-        <header></header>
-        <ul>
-            <a href="#">トップ</a>
-            <li>
-                <a href="#">聖書</a>
-            </li>
-            <li>
-                <a href="#">典礼</a>
-            </li>
-            <li>
-                <a href="#">各種</a>
-            </li>
-            <li>
-                <a href="#">神学文献一覧</a>
-            </li>
-        </ul>
-    </div>
+    <div id="sidebar"></div>
+    <script>
+    fetch('/sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('sidebar').innerHTML = data;
+        });
+    </script>
+    <!-- sidebar end -->
     <div class="honbun">
         <h1>Salve! / ようこそ！</h1>
         <br>

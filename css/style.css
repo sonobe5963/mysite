@@ -13,7 +13,7 @@ body {
   background-color: white;
 }
 
-.sidebar {
+.sidebar_css {
   position: fixed;
   left: -250px;
   color: white;
@@ -26,14 +26,14 @@ body {
   text-decoration: none;
 }
 
-.sidebar header {
+.sidebar_css header {
   text-align: center;
   font-size: 25px;
   padding-top: 10px;
   height: 60px;
 }
 
-.sidebar ul a {
+.sidebar_css ul a {
   display: block;
   font-size: 20px;
   height: 100%;
@@ -73,7 +73,7 @@ label #cancel {
   opacity: 0.15;
 }
 
-#check:checked ~ .sidebar {
+#check:checked ~ .sidebar_css {
   left: 0px;
 }
 
@@ -99,7 +99,7 @@ label #cancel {
 }
 
 #check:checked ~ .honbun {
-  left: 280px;
+  left: 260px;
 }
 
 .book {
