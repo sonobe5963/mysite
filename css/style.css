@@ -26,6 +26,7 @@ h1 {
 }
 
 .book {
+  color: blue;
   margin-top: 0.8em;
   position: relative;
   padding-left: 10px;
