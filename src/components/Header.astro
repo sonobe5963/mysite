@@ -2,12 +2,15 @@
 ---
 <header class="site-header">
   <div class="container">
-    <a href="/" class="logo">天主公教備忘録</a>
+    <a href="/" class="logo-container">
+      <img src="/images/ihs.png" alt="IHS ロゴ" class="logo-image" />
+      <span class="logo-text">天主公教備忘録</span>
+    </a>
     
     <nav class="nav-links">
       <a href="/about">案内</a>
       <a href="/bunken">文献</a>
-      <a href="/opera">祈祷</a>
+      <a href="/oratio">祈祷</a>
     </nav>
   </div>
 </header>
@@ -15,13 +18,13 @@
 <style>
   .site-header {
     width: 100%;
-    background-color: #ffffff; /* 白背景で清潔感を */
-    border-bottom: 1px solid #e0e0e0; /* 細い線一本だけ */
-    padding: 1.5rem 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0.8rem 0; /* タイトルが入るので少し詰めました */
   }
 
   .container {
-    max-width: 900px; /* 本文の幅に合わせる */
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -29,38 +32,55 @@
     align-items: center;
   }
 
-  .logo {
-    font-size: 1.4rem;
+  .logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px; /* ロゴ画像と文字の間の距離 */
+  }
+
+  .logo-image {
+    height: 50px; /* 画像の大きさ */
+    width: auto;
+    display: block;
+  }
+
+  .logo-text {
+    font-size: 1.6rem; /* タイトルの大きさ */
     font-weight: 700;
     color: #333;
-    text-decoration: none;
-    letter-spacing: 0.05em; /* 文字間隔を少し広げて品格を出す */
+    letter-spacing: 0.05em;
+    /* 日本語の美しさを出すために、少しだけフォントを調整 */
+    font-family: "M PLUS Rounded 1c", serif; 
   }
 
   .nav-links {
     display: flex;
-    gap: 20px; /* リンク同士の間隔 */
+    gap: 20px;
   }
 
   .nav-links a {
     text-decoration: none;
-    color: #666;
-    font-size: 0.95rem;
+    color: black;
+    font-size: 1.2rem;
     transition: color 0.2s;
   }
 
   .nav-links a:hover {
-    color: #364e8b; /* 以前使っていた紺色をアクセントに */
+    color: #364e8b;
   }
 
-  /* スマホ対応：画面が狭いときは縦に並べるか、中央寄せにする */
+  /* スマホ対応 */
   @media (max-width: 600px) {
     .container {
       flex-direction: column;
-      gap: 15px;
+      gap: 12px;
     }
-    .nav-links {
-      gap: 15px;
+    .logo-image {
+      height: 35px;
+    }
+    .logo-text {
+      font-size: 1.1rem;
     }
   }
 </style>

@@ -1,8 +1,108 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 ---
-<MainLayout title="カトリック神学文献">
-    <h1>カトリック神学文献</h1>
+<MainLayout title="神学文献案内">
 
+  <h1>神学文献案内</h1>
+
+  <section class="category">
+    <h2>キリスト教入門</h2>
     
+    <div class="book-item">
+      <div class="book-content">
+        <h3 class="book-title">岩下壮一『カトリックの信仰』</h3>
+        <p class="book-description">
+          カトリックの信仰とは何か。『公教要理』第一部に準拠した、日本の知識階級向けの平易な解説。
+        </p>
+      </div>
+      <div class="book-actions">
+        <a href="https://www.amazon.co.jp/s?k=岩下壮一+カトリックの信仰" target="_blank" rel="noopener noreferrer" class="amazon-button">
+          Amazonで探す
+        </a>
+      </div>
+    </div>
+
+    <div class="book-item">
+      <div class="book-content">
+        <h3 class="book-title">ヨゼフ・ラッチンガー 『キリスト教入門』</h3>
+        <p class="book-description">
+          教義学の権威であるラッツィンガー枢機卿（後の教皇ベネディクト十六世）によるキリスト教の入門書。散文的。
+        </p>
+      </div>
+      <div class="book-actions">
+        <a href="https://www.amazon.co.jp/s?k=ラッチンガー+キリスト教入門" target="_blank" rel="noopener noreferrer" class="amazon-button">
+          Amazonで探す
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>教理神学</h2>
+  </section>
+
 </MainLayout>
+
+<style>
+    /* 文献ごとの枠組み（フレックスボックスで横並びに） */
+    .book-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding: 1.2rem;
+        background-color: #fdfdfd;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        gap: 20px;
+    }
+
+    .book-content {
+        flex: 1; /* テキスト部分を広げる */
+    }
+
+    .book-title {
+        font-size: 1.1rem;
+        margin: 0 0 0.5rem 0;
+        color: #1a1a1a;
+    }
+
+    .book-description {
+        font-size: 0.95rem;
+        color: #555;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    /* Amazonボタンのデザイン */
+    .amazon-button {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #f0c14b; /* Amazon風のオレンジ */
+        border: 1px solid #a88734;
+        border-radius: 3px;
+        color: #111;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: bold;
+        white-space: nowrap; /* ボタン内で改行させない */
+        transition: background-color 0.2s;
+    }
+
+    .amazon-button:hover {
+        background-color: #ebb31a;
+        border-color: #9c7e31;
+    }
+
+    /* スマホでは縦並びにする */
+    @media (max-width: 600px) {
+        .book-item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .amazon-button {
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
