@@ -15,6 +15,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      # ★ここに「Node.js 22を使って」という指示を追加します
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: Install, build, and upload with Astro
         uses: withastro/action@v3
 
